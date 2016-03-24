@@ -10,7 +10,12 @@ import {
 import {
 	Button,
 	Badge,
-	Icon
+	Icon,
+	Card,
+	Radio,
+	InputGroup,
+	List,
+	ListItem
 } from '../../lib'
 
 
@@ -33,6 +38,30 @@ class App extends Component {
 			<Button styleName="negative" icon="home">你好</Button>
 			<hr/>
 			<Badge styleName="warning">12</Badge>
+			<hr/>
+			<Card>dsaf</Card>
+			<hr/>
+			<InputGroup>
+				<Radio name="test" left>怕就</Radio>
+				<Radio name="test">不是吧</Radio>
+			</InputGroup>
+			<hr/>
+			<List>
+				<ListItem>Hello</ListItem>
+				<ListItem>Hello</ListItem>
+				<ListItem navigate>Hello</ListItem>
+			</List>
+			<hr/>
+			<Card>
+				<List>
+					<ListItem>
+						Hello
+						<Badge>12</Badge>
+					</ListItem>
+					<ListItem>Hello</ListItem>
+					<ListItem navigate>Hello</ListItem>
+				</List>
+			</Card>
 		</div>
 	}
 
