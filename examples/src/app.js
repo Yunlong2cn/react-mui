@@ -15,13 +15,18 @@ import {
 	Radio,
 	InputGroup,
 	List,
-	ListItem
+	Switch,
+	Ellipsis
 } from '../../lib'
 
 
 class App extends Component {
 	
 	handleClick(e) {
+		alert('JSON.stringify(e)')
+	}
+
+	handleChange(e) {
 		alert('JSON.stringify(e)')
 	}
 
@@ -47,19 +52,46 @@ class App extends Component {
 			</InputGroup>
 			<hr/>
 			<List>
-				<ListItem>Hello</ListItem>
-				<ListItem>Hello</ListItem>
-				<ListItem navigate>Hello</ListItem>
+				<List.Item>Hello.........</List.Item>
+				<List.Item>Hello</List.Item>
+				<List.Item navigate>Hello</List.Item>
 			</List>
 			<hr/>
 			<Card>
 				<List>
-					<ListItem>
+					<List.Item navigate>
 						Hello
-						<Badge>12</Badge>
-					</ListItem>
-					<ListItem>Hello</ListItem>
-					<ListItem navigate>Hello</ListItem>
+						<Badge styleName="success">12</Badge>
+					</List.Item>
+					<List.Item>Hello</List.Item>
+					<List.Item navigate>Hello</List.Item>
+				</List>
+			</Card>
+			<hr/>
+			<Switch onClick={e => this.handleChange(e) } name="test"/>
+			<hr/>
+			<Switch active name="test2"/>
+			<hr/>
+			<Ellipsis>这里是内容呀这里是内容呀这里是内容呀这里是内容呀这里是内容呀这里是内容呀</Ellipsis>
+			<Ellipsis rowNum={2}>这里是内容呀这里是内容呀这里是内容呀这里是内容呀这里是内容呀这里是内容呀</Ellipsis>
+			<hr/>
+			<List>
+				<List.Media navigate title="test" to="hello" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+					Hello.........
+				</List.Media>
+				<List.Media right title="test" to="hello2" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+					Hello.........
+				</List.Media>
+			</List>
+			<hr/>
+			<Card>
+				<List>
+					<List.Media navigate title="test" to="hello" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+						Hello.........
+					</List.Media>
+					<List.Media right title="test" to="hello2" src="http://www.dcloud.io/hellomui/images/shuijiao.jpg">
+						Hello.........
+					</List.Media>
 				</List>
 			</Card>
 		</div>
